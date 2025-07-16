@@ -3,53 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>7 Sopas - Login / Registro</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Inicio - 7 Sopas</title>
+  <link rel="stylesheet" href="/CSS/inicio.css" />
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- HEADER -->
   <header>
     <div class="logo">7 Sopas 🍲</div>
     <nav>
       <ul>
-        <li><a href="#">Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Reservaciones</a></li>
-        <li><a href="#loginForm">Iniciar Sesión</a></li>
-        <li><a href="#registerForm">Registrarse</a></li>
+        <li><a href="IniciarSesion.html">Cuenta</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- CONTENIDO -->
-  <div class="background">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="card">
-        <div class="toggle-buttons">
-          <button id="btnLogin" class="active">Iniciar sesión</button>
-          <button id="btnRegister">Registrarse</button>
-        </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="glow-text">Bienvenido a <span>7 Sopas</span></h1>
+      <p>El mejor lugar para disfrutar una sopa caliente, sabrosa y tradicional a cualquier hora del día o la madrugada. Abierto 24/7 para curar corazones y resacas 🥣✨</p>
+      <a href="#" class="btn-neon">Ver menú</a>
+    </div>
+  </section>
+  <!-- CARRUSEL -->
+<section class="carousel-section">
+  <h2 class="carousel-title">Nuestras Sopas Estrella 🍜</h2>
+  <div class="carousel-container">
+    <div class="carousel-track" id="carousel-track">
+      <img src="images/carrusel_1.jpg" alt="Sopa 1" />
+      <img src="images/carrusel_2.jpg" alt="Sopa 2" />
+      <img src="images/carrusel_3.jpg" alt="Sopa 3" />
+    </div>
+    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+  </div>
+</section>
 
-        <form id="loginForm" class="form active">
-          <h2>¡Bienvenido a 7 Sopas!</h2>
-          <input type="email" placeholder="Correo electrónico" required />
-          <input type="password" placeholder="Contraseña" required />
-          <button type="submit" class="btn-sopa">Ingresar</button>
-        </form>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>7 Sopas 🍲</h3>
+      <p>Abierto 24/7. Servimos sabor casero, auténtico y potente desde 2013.</p>
+    </div>
 
-        <form id="registerForm" class="form">
-          <h2>Únete a nuestra comunidad 🍲</h2>
-          <input type="text" placeholder="Nombre completo" required />
-          <input type="email" placeholder="Correo electrónico" required />
-          <input type="password" placeholder="Contraseña" required />
-          <button type="submit" class="btn-sopa">Registrarse</button>
-        </form>
-      </div>
+    <div class="footer-section">
+      <h4>Enlaces rápidos</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="">Menú</a></li>
+        <li><a href="">Reservaciones</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contáctanos</h4>
+      <p>📞 (01) 700-7777</p>
+      <p>📍 Lima, Perú</p>
+      <p>📧 contacto@7sopas.pe</p>
     </div>
   </div>
 
-  <script src="logica.js"></script>
+  <div class="footer-bottom">
+    <p>&copy; 2025 7 Sopas. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+
+<script src="/JS/inicio.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+  background: #1a1a1a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffede0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border-bottom: 3px solid #ff7043;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e65100;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #5d4037;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #d84315;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff7043, #e65100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 80%);
+  top: 10%;
+  left: 10%;
+  animation: float 6s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(20px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 0 10px #fff2e0;
+}
+
+.glow-text span {
+  color: #fff7e6;
+  background: linear-gradient(to right, #ee7c11, #ffe0b2);
+  padding: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffd180, 0 0 20px #ffb74d;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #fffbea;
+  line-height: 1.6;
+}
+
+/* BOTÓN NEÓN */
+.btn-neon {
+  padding: 12px 24px;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: 0.4s;
+}
+
+.btn-neon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #fff, #ffcc80, #fff);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.btn-neon:hover::before {
+  opacity: 1;
+}
+
+.btn-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #fff6e0;
+}
+
+.carousel-section {
+  padding: 3rem 1rem;
+  background: #fff8f0;
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 2rem;
+  color: #e65100;
+  margin-bottom: 2rem;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 112, 67, 0.9);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: #d84315;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.footer {
+  width: 100%;
+  background: #ffede0;
+  color: #5d4037;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 3px solid #ff7043;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  gap: 3rem;
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer h3, .footer h4 {
+  color: #e65100;
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin: 0.4rem 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #6d4c41;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #bf360c;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff3e0;
+  border-top: 1px solid #ffe0b2;
+  font-size: 0.85rem;
+  color: #8d6e63;
+}
+
+

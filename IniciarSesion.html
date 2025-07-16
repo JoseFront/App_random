@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>7 Sopas - Login / Registro</title>
+  <link rel="stylesheet" href="/CSS/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">7 Sopas 🍲</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Reservaciones</a></li>
+        <li><a href="#loginForm">Cuenta</a>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO -->
+  <div class="background">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="card">
+        <div class="toggle-buttons">
+          <button id="btnLogin" class="active">Iniciar sesión</button>
+          <button id="btnRegister">Registrarse</button>
+        </div>
+
+        <form id="loginForm" class="form active">
+          <h2>¡Bienvenido a 7 Sopas!</h2>
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button type="submit" class="btn-sopa">Ingresar</button>
+        </form>
+
+        <form id="registerForm" class="form">
+          <h2>Únete a nuestra comunidad 🍲</h2>
+          <input type="text" placeholder="Nombre completo" required />
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button type="submit" class="btn-sopa">Registrarse</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/JS/logica.js"></script>
+</body>
+</html>
