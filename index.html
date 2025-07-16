@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login/Register Neon</title>
+  <title>7 Sopas - Login / Registro</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="background">
-    <div class="blur"></div>
+    <div class="overlay"></div>
     <div class="container">
       <div class="card">
         <div class="toggle-buttons">
@@ -16,21 +17,19 @@
           <button id="btnRegister">Registrarse</button>
         </div>
 
-        <!-- Login -->
         <form id="loginForm" class="form active">
-          <h2>Bienvenido</h2>
+          <h2>¡Bienvenido a 7 Sopas!</h2>
           <input type="email" placeholder="Correo electrónico" required />
           <input type="password" placeholder="Contraseña" required />
-          <button type="submit" class="glitch-button">Ingresar</button>
+          <button type="submit" class="btn-sopa">Ingresar</button>
         </form>
 
-        <!-- Registro -->
         <form id="registerForm" class="form">
-          <h2>Crear cuenta</h2>
+          <h2>Únete a nuestra comunidad 🍲</h2>
           <input type="text" placeholder="Nombre completo" required />
           <input type="email" placeholder="Correo electrónico" required />
           <input type="password" placeholder="Contraseña" required />
-          <button type="submit" class="glitch-button">Registrarse</button>
+          <button type="submit" class="btn-sopa">Registrarse</button>
         </form>
       </div>
     </div>
