@@ -13,3 +13,16 @@
   // Auto-slide cada 5 segundos
   setInterval(() => moveSlide(1), 5000);
 
+
+// Toggle dark mode functionality
+
+  const toggleBtn = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  });
+
+
+
