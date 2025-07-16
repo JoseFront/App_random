@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Luis</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login/Register Neon</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    ## Respositorio de Jose Luis
-    <h1>esto es una prueba de git
-    </h1>
-    <p>Este es un parrafo</p>
+  <div class="background">
+    <div class="blur"></div>
+    <div class="container">
+      <div class="card">
+        <div class="toggle-buttons">
+          <button id="btnLogin" class="active">Iniciar sesión</button>
+          <button id="btnRegister">Registrarse</button>
+        </div>
+
+        <!-- Login -->
+        <form id="loginForm" class="form active">
+          <h2>Bienvenido</h2>
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button type="submit" class="glitch-button">Ingresar</button>
+        </form>
+
+        <!-- Registro -->
+        <form id="registerForm" class="form">
+          <h2>Crear cuenta</h2>
+          <input type="text" placeholder="Nombre completo" required />
+          <input type="email" placeholder="Correo electrónico" required />
+          <input type="password" placeholder="Contraseña" required />
+          <button type="submit" class="glitch-button">Registrarse</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="logica.js"></script>
 </body>
 </html>
